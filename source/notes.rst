@@ -1,6 +1,13 @@
 Notes
 =====
 
+(Ken) [user presentation 45min]
+-------------------------------
+
+This will be a Ganeti Web Manager status report.
+Talk about where we've gotten in the past year and the struggles we've run into.
+We'll also talk about what we'd like to do in a redesign of the application.
+
 (Lance) [user presentation 45min]
 ---------------------------------
 
