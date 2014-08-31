@@ -54,4 +54,54 @@ Build environment requirements
   * Varying OS Definitions
 * Support various OS host platforms: Debian, Ubuntu and CentOS
 
+Ganeti Installation Options
+---------------------------
 
+* Use Ganeti PPA / JFut's YUM repo
+* Build our own deb/rpms
+* Omnibus binary package
+
+Omnibus Intro
+-------------
+
+* Full-stack Project Installer
+* Vendorize all dependencies into a single binary rpm/deb
+* Chef, Chef-Server, Chef-DK uses Omnibus
+
+Omnibus Pros/Cons
+-----------------
+
+:Pros:
+
+  * Complete control of the whole software stack dependency tree
+  * No distro-specific package dependencies
+  * Single Package to install
+
+:Cons:
+
+  * Prefix hell
+  * Security maintenance for all libraries
+  * Building large packages can be complicated
+
+So why use Omnibus for Ganeti?
+------------------------------
+
+* Curious if it would work!
+* Build Ganeti with the upstream preferred versions of libraries
+* Automate builds for testing of GWM
+
+Demo
+----
+
+.. code-block:: bash
+
+  # CentOS 6
+  yum install http://ftp.osuosl.org/pub/osl/omnibus/ganeti/ganeti-2.11.2_20140704_192212-1.el6.x86_64.rpm
+
+  # Ubuntu 12.04
+  wget http://ftp.osuosl.org/pub/osl/omnibus/ganeti/ganeti_2.11.2-20140704-192150-1_amd64.deb
+  dpkg -i ganeti_2.11.2-20140704-192150-1_amd64.deb
+
+  # Debian 7
+  wget http://ftp.osuosl.org/pub/osl/omnibus/ganeti/ganeti_2.11.2-20140704-191038-1_amd64.deb
+  dpkg -i ganeti_2.11.2-20140704-191038-1_amd64.deb
