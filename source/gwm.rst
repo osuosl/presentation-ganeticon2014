@@ -62,7 +62,7 @@ GWM Structure
 
 Caches cluster information to avoid frquent API calls
 
-.. figure:: _static/ganeti_cache.png
+.. figure:: /_static/ganeti_cache.png
     :align: center
 
 
@@ -78,14 +78,14 @@ VNC Auth Proxy
 
 VNC Authentication proxy allows vnc access to private networks
 
-.. figure:: _static/vnc1.png
+.. figure:: /_static/vnc1.png
     :align: center
 
 
 VNC Auth Proxy
 ==============
 
-.. figure:: _static/vm-console-small.png
+.. figure:: /_static/vm-console-small.png
     :align: center
 
 
@@ -94,14 +94,53 @@ Interacting with the RAPI
 
 
 
-Live Demo
-=========
+New in 0.11
+===========
 
-Live Demo (if time)
+.. rst-class:: build
+
+**Stabilize and Package**
+
+- Move to Github
+- Modularization
+- Python package
+- Setup script
+- Chef deployment
+- Development Environment (vagrant)
+- Better documentation
+
+
+New in 0.11
+===========
+
+.. rst-class:: build
+
+**New Features**
+
+- VM creation wizard
+- Bulk actions
+- Visualization
+
+
+Experimental Projects
+=====================
+
+- Export VM
+- Serial Console
 
 
 Lessons Learned
 ===============
+
+- Serial terminal communication
+- Django packaging
+- RAPI Documentation
+
+
+Live Demo
+=========
+
+Live Demo (if time)
 
 
 
