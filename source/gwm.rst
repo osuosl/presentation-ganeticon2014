@@ -33,6 +33,11 @@ What is GWM?
 - Organize users arbitrarily
 - Make management easy with templates and bulk actions
 
+.. note::
+
+    Quick overview for those who aren't familiar, this is a list of 
+    goals for the project.
+
 
 GWM Structure
 =============
@@ -46,6 +51,11 @@ GWM Structure
 - Django Object Log
 - NoVNC
 
+.. note::
+
+    Skip through quickly, point out recent work with NoVnc
+
+
 GWM Structure
 =============
 
@@ -56,14 +66,23 @@ GWM Structure
 - Changes to the models are communicated to Ganeti as jobs
 - Cache system updates models from current Ganeti state
 
+.. note::
+
+    Skip through quickly
+
 
 GWM Structure
 =============
 
-Caches cluster information to avoid frquent API calls
+Caches cluster information to avoid frequent API calls
 
 .. figure:: /_static/ganeti_cache.png
     :align: center
+
+.. note::
+
+    Note the reliance on the RAPI and how the design was informed by the RAPI's
+    performance. Faster RAPI means less need for heavy caching
 
 
 GWM Structure
@@ -71,6 +90,10 @@ GWM Structure
 
 - NoVNC provides console access from the web interface
 - VNC Auth proxy allows access to a VNC terminal on instances from the web client 
+
+.. note::
+
+    NoVNC is a bit of a moving target, as is websockets support
 
 
 VNC Auth Proxy
@@ -88,38 +111,93 @@ VNC Auth Proxy
 .. figure:: /_static/vm-console-small.png
     :align: center
 
+.. note::
 
-Interacting with the RAPI
-=========================
+    Note work towards a more general proxy for both serial and vnc connectivity
 
 
 
 New in 0.11
 ===========
 
-.. rst-class:: build
-
 **Stabilize and Package**
+
+.. rst-class:: build
 
 - Move to Github
 - Modularization
-- Python package
 - Setup script
+- Python package
 - Chef deployment
 - Development Environment (vagrant)
 - Better documentation
 
 
+.. note::
+
+    Github: 
+
+    - more visibility, easier contribution
+    - pull requests are more familiar to many new developers
+
+    Modularization:
+
+    - split out the functional units, easier to maintain, add new apps
+
+    Setup script:
+
+    - simplified installation
+    - useful for creating the python package
+    - scripts both dev and production setup steps
+
+    Python package:
+
+    - standardized installation for python applications
+    - easier deployment, automated and manual
+
+    Chef deployment (Lance input?)
+
+    - setup scripts, vncauthproxy init script, and other components 
+
+    Dev env:
+
+    - vagrant environment with chef to deploy
+    - deploy to any vagrant provider, virtualbox, openstack, etc
+
+    Docs:
+
+    - complete restructure of documentation
+    - prototype documentation for other OSL projects
+    - community-oriented contributor docs
+
+
 New in 0.11
 ===========
 
-.. rst-class:: build
-
 **New Features**
+
+.. rst-class:: build
 
 - VM creation wizard
 - Bulk actions
 - Visualization
+
+.. note::
+
+    Wizard:
+
+    - makes VM form a logical workflow
+    - replaces very large, unmaintainable javascript
+    - uses standard Django form wizard and methodology
+    - easy to save as template
+
+    Bulk actions:
+
+    - ability to select multiple VMs for certain actions (not all implemented yet)
+
+    Visualization:
+
+    - GSOC project provides a javascript visualization of cluster - can be expanded into an admin interface
 
 
 Experimental Projects
@@ -127,6 +205,14 @@ Experimental Projects
 
 - Export VM
 - Serial Console
+
+.. note::
+
+    These items are not complete, but have been experimented with (Lance input?)
+
+    Export: use ganeti's export functionality to export vms via GWM/RAPI
+
+    Serial Console: direct connection to hypervisor serial console using an authproxy similar to vncauthproxy, and socat. Very difficult, some progress using Twisted and websockets, but not finished before 0.11. This is an important functionality for GWM's future
 
 
 Lessons Learned
@@ -137,12 +223,30 @@ Lessons Learned
 - RAPI Documentation
 
 
-Live Demo
-=========
+Future Plans
+============
 
-Live Demo (if time)
+.. figure:: /_static/the_general_problem.png
+    :align: center
 
 
+Future Plans
+============
+
+**GWM API**
+
+.. rst-class:: build
+
+- Rest API layer between Ganeti RAPI and user interface
+- Implement core GWM functions, user/group management, quotas, VNC and Serial consoles
+- Allow multiple front-end interfaces, Horizon, mobile apps, etc
+- Leverage third party authentication tools
+- Use external job queue and caching systems
+
+.. note::
+
+    We'll discuss the details of the redesign in Thursday's design talk
+    Live demo of GWM if time and interest
 
 Questions?
 ==========
