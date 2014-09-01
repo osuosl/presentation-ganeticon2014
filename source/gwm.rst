@@ -91,30 +91,13 @@ GWM Structure
 - NoVNC provides console access from the web interface
 - VNC Auth proxy allows access to a VNC terminal on instances from the web client 
 
-.. note::
-
-    NoVNC is a bit of a moving target, as is websockets support
-
-
-VNC Auth Proxy
-==============
-
-VNC Authentication proxy allows vnc access to private networks
-
 .. figure:: /_static/vnc1.png
     :align: center
 
-
-VNC Auth Proxy
-==============
-
-.. figure:: /_static/vm-console-small.png
-    :align: center
-
 .. note::
 
+    NoVNC is a bit of a moving target, as is websockets support
     Note work towards a more general proxy for both serial and vnc connectivity
-
 
 
 New in 0.11
@@ -203,6 +186,9 @@ New in 0.11
 Experimental Projects
 =====================
 
+
+.. rst-class:: build
+
 - Export VM
 - Serial Console
 
@@ -218,6 +204,8 @@ Experimental Projects
 Lessons Learned
 ===============
 
+.. rst-class:: build
+
 - Serial terminal communication
 - Django packaging
 - RAPI Documentation
@@ -230,10 +218,8 @@ Future Plans
     :align: center
 
 
-Future Plans
-============
-
-**GWM API**
+GWM API
+=======
 
 .. rst-class:: build
 
@@ -247,6 +233,14 @@ Future Plans
 
     We'll discuss the details of the redesign in Thursday's design talk
     Live demo of GWM if time and interest
+
+
+GWM API
+=======
+
+.. figure:: /_static/diagram.png
+    :align: center
+
 
 Questions?
 ==========
