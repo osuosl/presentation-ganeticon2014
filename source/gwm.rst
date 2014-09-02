@@ -249,6 +249,15 @@ GWM API
 .. figure:: /_static/diagram.png
     :align: center
 
+Ganeti at OSL Status Report
+===========================
+
+- Not much has changed since last year
+- Still running 2.6.2 :(
+- Still migrating hosts from Gentoo to CentOS 6
+- Consolidating project clusters
+- Working on a Chef Cookbook
+- Ganeti/Openstack integration ideas
 
 Questions?
 ==========
