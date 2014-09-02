@@ -5,5 +5,6 @@ OSUOSL GanetiCon 2014
   :maxdepth: 1
 
   gwm
-  omnibus-chef  
+  omnibus-chef
+  design-discussion
   notes
