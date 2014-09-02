@@ -18,6 +18,15 @@ Who are we?
 - We foster and develop Open Source software
 - We are from Oregon
 
+How do we use Ganeti
+====================
+
+- Ganeti Instance Image
+- Primary prod cluster
+
+  - 6 nodes, 147 instances
+- Project clusters (i.e. PSF, OSGeo, etc)
+- Host mail servers, websites, etc
 
 What is GWM?
 ============
