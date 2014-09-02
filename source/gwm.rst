@@ -274,7 +274,7 @@ Questions?
 
 :author: Ken Lett, Lance Albertson
 :email: kennric@osuosl.org, lance@osuosl.org
-:twitter: kennric, @kenlett, @ramereth
+:twitter: @kenlett, @ramereth
 :sites: http://code.google.com/p/ganeti/,
   http://code.osuosl.org/projects/ganeti-webmgr
 :irc: #ganeti-webmgr, #osuosl
