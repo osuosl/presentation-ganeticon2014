@@ -74,7 +74,7 @@ GWM Structure
 GWM Structure
 =============
 
-Caches cluster information to avoid frequent API calls
+Caching cluster information to avoid frequent API calls
 
 .. figure:: /_static/ganeti_cache.png
     :align: center
