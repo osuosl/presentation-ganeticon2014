@@ -16,6 +16,7 @@ Overview
 .. note::
 
     We recognize that many of the features we'd like to see may already be implemented, or might be implementable with existing features. This requires that the documentation be good enough to discover...
+    We've been in a silo, and behind several versions of Ganeti
 
 Overview
 ========
@@ -26,7 +27,8 @@ Overview
 
 .. note::
 
-    And we also want to be careful that we are not asking for accommodation of our square peg into a round solution
+    - And we also want to be careful that we are not asking for accommodation of our square peg into a round solution. 
+    - We don't have very specific design proposals, but want to make the team aware of the use cases we are working with, which may inform design decisions.
 
 Overview
 ========
@@ -95,7 +97,21 @@ RAPI Job/Status Tracking
 Third Party Design Considerations
 =================================
 
+.. figure:: /_static/diagram.png
+    :align: center
+
+.. note::
+
+    This seems to be the basic design for building admin interfaces for ganeti
+    How much of the gwm api should filter down to the ganeti level
+    How much should the gwm api look like openstack?
+
+
+Third Party Design Considerations
+=================================  
+
 - API design - converging on Openstack?
+- Best practices
 
 
 Extras
@@ -108,5 +124,10 @@ Extras
 Discussion
 ==========
 
-*Attribution-ShareAlike CC BY-SA ©2014*
+- What can OSL do to help?
 
+
+Thank You
+=========
+
+*Attribution-ShareAlike CC BY-SA ©2014*
