@@ -9,9 +9,24 @@ OSUOSL Design Discussion
 Overview
 ========
 
+
+.. figure:: /_static/rtfm.png
+    :align: center
+
+.. note::
+
+    We recognize that many of the features we'd like to see may already be implemented, or might be implementable with existing features. This requires that the documentation be good enough to discover...
+
+Overview
+========
+
+
 .. figure:: /_static/hell.png
     :align: center
 
+.. note::
+
+    And we also want to be careful that we are not asking for accommodation of our square peg into a round solution
 
 Overview
 ========
@@ -61,8 +76,8 @@ RAPI Performance
 - Separate metadata daemon/API
 
 
-RAPI Job Tracking
-=================
+RAPI Job/Status Tracking
+========================
 
 .. rst-class:: build
 
@@ -81,14 +96,13 @@ Third Party Design Considerations
 =================================
 
 - API design - converging on Openstack?
-- Storage implementation
 
 
 Extras
 ======
 
 - Authorization setup via RAPI
-- Log access
+- Log / Job history access
 
 
 Discussion
