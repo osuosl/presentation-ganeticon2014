@@ -66,10 +66,15 @@ RAPI Job Tracking
 
 .. rst-class:: build
 
+- /jobs/<id>/wait
 - Polling
 - Watcher daemon
 - Central reporting
 - Callback URL
+
+.. note::
+
+    :wait: - not well documented, how long does it wait?
 
 
 Third Party Design Considerations
@@ -82,7 +87,7 @@ Third Party Design Considerations
 Extras
 ======
 
-- Authoriztion granularity
+- Authorization setup via RAPI
 - Log access
 
 
