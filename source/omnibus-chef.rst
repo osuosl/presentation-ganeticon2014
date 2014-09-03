@@ -57,51 +57,71 @@ Build environment requirements
 Ganeti Installation Options
 ---------------------------
 
-* Use Ganeti PPA / JFut's YUM repo
+Packaging with current Ganeti releases:
+
+:Debian: Backports
+:Ubuntu: Ganeti PPA
+:RHEL: JFut's yum repo
+
+Other Options:
+
+.. rst-class:: build
+
 * Build our own deb/rpms
+* Build from source
 * Omnibus binary package
 
-Omnibus Intro
--------------
+Reasons for try Omnibus
+-----------------------
+
+- The Challenge -- will it work?
+- Study the feasibility given Ganeti's growing dependencies
+- Research the pros/cons of the method
+- Its fun, right? :)
+
+So what is Omnibus?
+-------------------
 
 * Full-stack Project Installer
 * Vendorize all dependencies into a single binary rpm/deb
+
+  - All software dependencies are build into a prefixed environment
+    ``/opt/ganeti``
+  - Only system libraries are allowed to be linked to software (i.e. glibc, etc)
 * Chef, Chef-Server, Chef-DK uses Omnibus
 
-Omnibus Pros/Cons
------------------
+Omnibus Pros
+------------
 
-:Pros:
+* Complete control of the whole software stack dependency tree
+* Use newer versions of software that upstream prefers
+* No distro-specific package dependencies
+* Build caching with git
+* Single Package to install
+* Extremely simple installation and deployment
 
-  * Complete control of the whole software stack dependency tree
-  * No distro-specific package dependencies
-  * Single Package to install
+Omnibus Cons
+------------
 
-:Cons:
+* Prefix hell
 
-  * Prefix hell
-  * Security maintenance for all libraries
-  * Build caching with git
-  * Building large packages can be complicated
+  - Making sure everything is linked to the prefix environment
+  - Fixed path assumptions by upstream (i.e. ``/usr/bin/python``)
+* Security maintenance for all software (yes, you even build your own openssl)
+* Building large packages can be complicated
+* Non-standard method
 
 How Omnibus Works
 -----------------
 
 * Builds a self contained prefixed environment on the host machine
-* Typically built using Test Kitchen on a target OS Virtual machine
+* Typically built using Test Kitchen/Vagrant on a target OS Virtual machine
 * Installs and creates a sane build environment
 * Installs Omnibus project configuration
 * Runs omnibus to install the project
-* Uses git and git tags to cache builds
+* Installs package dependencies
 * Ensures no external library linking
-
-So why use Omnibus for Ganeti?
-------------------------------
-
-* Curious if it would work!
-* Build Ganeti with the upstream preferred versions of libraries
-* Automate builds for testing of GWM
-* Seemed like an interesting way to package Ganeti in an easy form
+* Exports a deb/rpm at the end
 
 Demo
 ----
@@ -161,6 +181,7 @@ https://github.com/osuosl-cookbooks/ganeti
 * Installs Ganeti from Ubuntu PPA or JFut's Yum repo
 * Ganeti initialization support
 * Setting of RAPI users via encrypted data bags
+* Demo
 
 Cookbook TODOs
 --------------
@@ -168,7 +189,7 @@ Cookbook TODOs
 * Support for Debian 7 and Ubuntu 14.04
 * Installing using Omnibus Ganeti
 * Publish Ganeti Instance Image cookbook
-* Xen Support
+* Xen Support ?
 * Internal wrapper cookbook for site specific needs
 
 Questions?
