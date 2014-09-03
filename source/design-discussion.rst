@@ -64,6 +64,8 @@ RAPI Performance
 RAPI Job Tracking
 =================
 
+.. rst-class:: build
+
 - Polling
 - Watcher daemon
 - Central reporting
