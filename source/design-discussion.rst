@@ -15,7 +15,10 @@ Overview
 
 .. note::
 
-    We recognize that many of the features we'd like to see may already be implemented, or might be implementable with existing features. This requires that the documentation be good enough to discover...
+    We recognize that many of the features we'd like to see may already be
+    implemented, or might be implementable with existing features. This requires
+    that the documentation be good enough to discover...
+
     We've been in a silo, and behind several versions of Ganeti
 
 Overview
@@ -27,8 +30,11 @@ Overview
 
 .. note::
 
-    - And we also want to be careful that we are not asking for accommodation of our square peg into a round solution. 
-    - We don't have very specific design proposals, but want to make the team aware of the use cases we are working with, which may inform design decisions.
+    - And we also want to be careful that we are not asking for accommodation of
+      our square peg into a round solution.
+    - We don't have very specific design proposals, but want to make the team
+      aware of the use cases we are working with, which may inform design
+      decisions.
 
 Overview
 ========
@@ -49,7 +55,8 @@ RAPI Documentation
 
 .. note::
 
-    :documentation: Maybe auto-doc of some kind? Need all possible return values, http codes, etc
+    :documentation: Maybe auto-doc of some kind? Need all possible return
+      values, http codes, etc
     :versioning: Does it have to track ganeti major version? What is the update plan?
 
 
@@ -57,7 +64,9 @@ RAPI Perfomance
 ===============
 
 **Goals**
-- Minimize the difference between Ganeti's state and our knowledge of Ganeti's state
+
+- Minimize the difference between Ganeti's state and our knowledge of Ganeti's
+  state
 - Avoid waiting around for Ganeti
 
 
@@ -66,7 +75,6 @@ RAPI Perfomance
 - Fast access to cluster and instance state
 - Slower access to cluster and instance details
 - Feedback: Is my VM ready yet?
-    
 
 RAPI Performance
 ================
@@ -83,7 +91,7 @@ RAPI Job/Status Tracking
 
 .. rst-class:: build
 
-- /jobs/<id>/wait
+- ``/jobs/<id>/wait``
 - Polling
 - Watcher daemon
 - Central reporting
@@ -102,13 +110,12 @@ Third Party Design Considerations
 
 .. note::
 
-    This seems to be the basic design for building admin interfaces for ganeti
-    How much of the gwm api should filter down to the ganeti level
-    How much should the gwm api look like openstack?
-
+    - This seems to be the basic design for building admin interfaces for ganeti
+    - How much of the gwm api should filter down to the ganeti level
+    - How much should the gwm api look like openstack?
 
 Third Party Design Considerations
-=================================  
+=================================
 
 - API design - converging on Openstack?
 - Best practices
@@ -126,8 +133,6 @@ Discussion
 
 - What can OSL do to help?
 
-
-Thank You
-=========
+**Thank you!**
 
 *Attribution-ShareAlike CC BY-SA ©2014*
