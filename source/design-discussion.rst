@@ -5,17 +5,16 @@ OSUOSL Design Discussion
 :company: OSU Open Source Lab
 :email: lance@osuosl.org, kennric@osuosl.org
 
-Title
------
+RAPI Design needs
+-----------------
 
-Foo bar
+- Better API documentation
+- Predictable return codes
+- Faster queries
 
-Questions?
+
+Discussion
 ==========
-
-:authors: Lance Albertson, Ken Lett
-:company: OSU Open Source Lab
-:email: lance@osuosl.org, kennric@osuosl.org
 
 *Attribution-ShareAlike CC BY-SA ©2014*
 
